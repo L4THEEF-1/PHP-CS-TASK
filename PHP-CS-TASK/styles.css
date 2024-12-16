@@ -1,0 +1,250 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: whitesmoke;
+    color: #333;
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+}
+
+p,h1,h2,h3,h4,h5,h6{
+    font-family: 'Poppins',sans-serif;
+    font-weight: 800;
+
+}
+
+.door {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border: 2px solid #fff;
+    text-decoration: none;
+    color: #121212;
+    font-size: 20px;
+    background: #666;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.door:hover {
+    transform: scale(1.02);
+    background: #888;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #444;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #333;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.header div {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.dark-mode-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.dark-mode-icon:hover {
+    transform: rotate(15deg);
+}
+
+.dark-mode .dark-mode-icon {
+    content: url(sun.png);
+}
+
+.story-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    overflow-y: auto;
+    height: 80vh;
+    margin: 20px auto;
+    border: 2px solid #666;
+    background: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.story-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 100px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.story-section p {
+    width: 75%;
+    margin: 0;
+    font-size: 18px;
+    color: #444;
+}
+
+.intro-text{
+    font-size: 20px;
+    text-transform: uppercase;
+    color: black;
+    padding: 20px;
+
+}
+
+.story-section.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.story-section.hidden {
+    opacity: 0.1;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+
+.door img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.door img:hover{
+    content: url(dooropen.png);
+
+}
+
+
+.door-label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #444;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-mode p,h1,h2,h3,h4,h5,h6{
+    color: whitesmoke;
+}
+
+.dark-mode .header {
+    background: #121212;
+    color: #eee;
+    border-bottom: 2px solid #444;
+}
+
+.door img.dark-mode {
+    filter: brightness(0.8);
+}
+
+.door-label {
+    color: #ddd;
+}
+
+button{
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 10px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #000;
+    background: transparent;
+    color: #000;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 15px;
+
+}
+
+span{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+
+button:hover span{
+    width: 100%;
+
+}
+
+button:hover{
+    border-color: #111;
+
+}
+
+.dark-mode button{
+    width: 150px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 10px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid whitesmoke;
+    background: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.dark-mode span{
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+
+}
+
+.dark-mode button:hover span{
+    width: 100%;
+
+}
+
+.dark-mode button:hover{
+    border-color: white;
+
+}
+

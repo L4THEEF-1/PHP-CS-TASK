@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Doors</title>
+    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+
+</head>
+<body>
+    <div class="header">
+        <div>Welcome to the Fantasy Doors</div>
+        <img id="darkModeToggle" src="moon.png" alt="Dark Mode" class="dark-mode-icon" title="Toggle Dark Mode" style="width:20px;">
+    </div>
+    <main>
+        <p class="intro-text">Select a door to begin your journey:</p>
+        <div class="door-container">
+            <a href="story1.php" class="door">
+                <img src="door.png" alt="Door 1">
+                <p>DOOR 1</p>
+            </a>
+            <a href="story2.php" class="door">
+                <img src="door.png" alt="Door 2">
+                <p>DOOR 2</p>
+            </a>
+            <a href="story3.php" class="door">
+                <img src="door.png" alt="Door 3">
+                <p>DOOR 3</p>
+            </a>
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("darkModeToggle");
+            toggle.addEventListener("click", () => {
+                document.body.classList.toggle("dark-mode");
+            });
+        });
+    </script>
+</body>
+</html>
